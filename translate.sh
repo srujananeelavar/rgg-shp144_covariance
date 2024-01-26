@@ -12,6 +12,8 @@ read -p "Enter the path to the input FASTA file that needs to be translated: " i
 # Output file name for translated protein sequences
 read -p "Enter the path to the output protein sequence file including the name of the file: " output_protein
 
+echo "Translating $input_fasta to $output_protein..."
+
 # Run transeq to translate the FASTA file
 transeq -sequence "$input_fasta" -outseq "$output_protein"
 
