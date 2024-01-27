@@ -15,6 +15,6 @@ read -p "Enter the path to the output protein sequence file including the name o
 echo "Translating $input_fasta to $output_protein..."
 
 # Run transeq to translate the FASTA file
-transeq -sequence "$input_fasta" -outseq "$output_protein"
+transeq -frame 1 -sformat pearson -sequence "$input_fasta" -outseq "$output_protein"
 
 echo "Translation completed. Protein sequences are stored in $output_protein."
