@@ -7,7 +7,7 @@ import xlwt
 def parseDir(directory, querys, blast_type, max_Eval, similarity, min_length):
     listOfInputs = []
     for file in os.listdir(directory):
-        if "fasta.out" in file:
+        if "fa.out" in file:
             listOfInputs.append((directory + file))
 
     dataParsed = dict()

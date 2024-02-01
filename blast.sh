@@ -25,7 +25,7 @@ read -p "Enter the path to the directory where you want to store the blast outpu
 mkdir -p "$output_dir/blast_output"
 
 # Execute blastn for each .fasta file in the database directory
-for f in "$database_dir"/*.fasta; do
+for f in "$database_dir"/*.fa; do
     blastn -query "$searchseq_file" -subject "$f" -out "$output_dir/blast_output/$(basename "$f").out"
 done
 

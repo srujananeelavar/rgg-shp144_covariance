@@ -34,7 +34,7 @@ def findUpDown(data, fas_dir, direction, length, output_type, divider, output_fi
 	#dictionary to hold all the sequences
 	out = []
 	for ID in data:
-		file = fas_dir + ID + '.fasta'
+		file = fas_dir + ID + '.fa'
 		#open file
 		inputFile = open(file, 'r')
 		inputString = inputFile.readlines()
